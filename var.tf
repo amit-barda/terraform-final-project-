@@ -4,12 +4,12 @@ variable "region" {
 
 variable "access_key" {
   type        = string
-  default     = "AKIAXJPPPJTJMJFMDCFF"
+  default     = "your_key"
 }
 
 variable "secret_key" {
   type        = string
-  default     = "UC2Go/aSTNDIiS2xz7wg5yH/wJwpmh40wv8ZzD+y"
+  default     = "your_key"
 }
 
 variable "vpc_cidr_block" {
@@ -23,3 +23,9 @@ variable "public_subnet_cidr_blocks" {
   default = "10.0.2.0/24"
 }
 
+variable "availability_zone_a" {
+  default     = "us-east-1a" 
+}
+variable "availability_zone_b" {
+  default     = "us-east-1b" 
+}
