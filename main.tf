@@ -8,7 +8,7 @@ resource "aws_vpc" "my_vpc" {
 resource "aws_subnet" "private-subnet" {
   vpc_id     = aws_vpc.my_vpc.id
   cidr_block = var.private_subnet_cidr_blocks
-  availability_zone = "us-east-1a"
+  availability_zone = var.availability_zone_a
     tags = {
     Name = "private-subnet"
   }
@@ -17,7 +17,7 @@ resource "aws_subnet" "private-subnet" {
 resource "aws_subnet" "public-subnet" {
   vpc_id     = aws_vpc.my_vpc.id
   cidr_block = var.public_subnet_cidr_blocks
-  availability_zone = "us-east-1b"
+  availability_zone = var.availability_zone_b
   tags = {
     Name = "public-subnet"
   }
@@ -108,4 +108,3 @@ resource "aws_security_group" "db-sg" {
     Name = "db-sg"
   }
 }
-
