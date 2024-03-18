@@ -108,3 +108,12 @@ resource "aws_security_group" "db-sg" {
     Name = "db-sg"
   }
 }
+resource "aws_s3_bucket" "tf_bucket" {
+  bucket = var.s3name
+  acl    = "private"
+
+  tags = {
+    Name = "tf_bucket" 
+  }
+}
+
