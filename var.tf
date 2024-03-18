@@ -29,3 +29,7 @@ variable "availability_zone_a" {
 variable "availability_zone_b" {
   default     = "us-east-1b" 
 }
+variable "s3name" {
+  type        = string
+  default     = "fromterraformforwebsiteprojcet2024"
+}
